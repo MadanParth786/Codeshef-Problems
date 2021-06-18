@@ -9,8 +9,11 @@ int main()
 	if(area>peri){
 		cout<<"Area"<<"\n"<<area;
 	}
-	else{
+	else if(peri>area){
 		cout<<"Peri"<<"\n"<<peri;
 	}
+	else{
+		cout<<"Eq"<<"\n<<area;
+	     }
 	return 0;
 }
