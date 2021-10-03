@@ -9,7 +9,7 @@ int main(void)
 		if(a+b+c<=d ){
 			cout<<"1"<<"\n";
 		}
-		else if(c+a<=d) or b+a<=d{
+		else if(c+a<=d or b+a<=d){
 			cout<<"2"<<"\n";
 		}
 		else{
