@@ -1,46 +1,25 @@
-#include<iostream>
+#include<bits/stdc++.h>
 using namespace std;
 int main(void)
 {
-	int n,t;
-	cin>>n;
+	int t;
 	cin>>t;
-	string str=to string(n);
-	int len=str.length();
-	
-	if(t==0){
-		int x=len;
-		for(int i=0;i<len;i++){
-			if(str[i]=='0'){
-				str[i]='1';
-				x=i;
-				break;
+	while(t--){
+		int n,d;
+		cin>>n>>d;
+		int N=n,r,ans=0,c=0;
+		while(N>0)
+		{
+			r=N%10;
+			N=N/10;
+			c++;
+			if(r==d)
+			{
+				N=N*pow(10,c)+(r+1)*pow(10,c-1);
+				ans=N-n;
+				c=0;
 			}
 		}
-		for(int j=x+1;j<len;j++){
-			str[j]='1';
-		}
-	}
-	else if(d==9){
-		if(str[0]=='9'){
-			for(int i=0;i<len;i++){
-				str[i]='0';
-			}
-			str="1"+str;
-		}
-		else{
-			int w=len;
-			for(int i=0;i<len;i++){
-			if(str[i]=='9'){
-			  for(int k=i-1l;k>=0;k--){
-			  	if(str[k]<='7'){
-			  		str[k]++;
-			  		w=k;
-			  		goto cvv;
-				  }
-			  }
-			}
-			// Not complete........//
-		}
+		cout<<ans<<"\n";
 	}
 }
